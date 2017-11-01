@@ -13,3 +13,25 @@ change.
 CVV.
 - Provide a receipt for the payment which includes the item(s) bought, the
 subtotal, grand total, and anything else of interest.
+
+## Desktop Wireframe
+
+Menu
+
+![menu](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Menu.png)
+
+Shopping Cart
+
+![cart](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/ShoppingCart.png)
+
+Payment - Card
+
+![payment card](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Payment-Card.png)
+
+Payment - Cash
+
+![payment cash](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Payment-Cash.png)
+
+Reciept
+
+![reciept](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Reciept.png)
