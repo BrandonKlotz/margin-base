@@ -27,10 +27,10 @@ $(function() {
 let itemDetails = "";
 	$.each(items, function(index, object) {
 	   $.each(object,function(attribute, value){
-	     //console.log(`${value}`);
+	     console.log(`${value}`);
 	     // do something with each attribute and value, like concat a variable?
-	     itemDetails = itemDetails + " " + value;
-	     console.log(itemDetails);
+	     // itemDetails = itemDetails + " " + value;
+	     // console.log(itemDetails);
 	   });
 	});
 
