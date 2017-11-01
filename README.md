@@ -1,9 +1,7 @@
-# pos-lab
-Developing a mock POS System
+# POS WEBSITE
 
-## POS WEBSITE
-(That stands for Point-Of-Sale, but what you think of your project is up to you.)
-Write a cash register or self-service application for some type of consumer-driven business. Obvious choices include a small store, a coffee shop, or a fast food restaurant. At a minimum, this should include:
+At a minimum, this should include:
+
 - A list of twelve products that have properties for: name, category, description, and price.
 - Present a menu to the user and let them choose an item or items to purchase.
   - The item(s) the user will buy will be added to a cart until they are ready for checkout.
