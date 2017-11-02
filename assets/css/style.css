@@ -67,32 +67,6 @@ img {
     padding-bottom: 10px;
 }
 
-.cart {
-  display: none;
-}
-
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  margin: 2em;
-}
-
-.recieptContainer {
-  border-bottom-color: #eee;
-  border-bottom-style: solid;
-  border-top-color: #eee;
-  border-top-style: solid;
-  border-width: 1px;
-  margin: 2em;
-  padding: 2em;
-}
-
-.recieptTotal {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-}
-
 #cart {
     background-color: white;
     display: flex;
@@ -130,8 +104,70 @@ nav {
     padding: 1em;
 }
 
-.item:hover {
-  background-color: #eee;
+.cartView {
+
+}
+
+.cartItem {
+    display:flex;
+    justify-content: left;
+    text-align: left;
+    margin-right: 2em;
+    margin-left: 4em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.flexTotals {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+#border{
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: .5em;
+    font-size: 1.3em;
+}
+
+.subTxt{
+    padding: 1em 3em 1em 1em;
+}
+
+.amount {
+    padding: 1em 5em 1em 2em;
+}
+
+.taxTxt{
+    padding: 1em 3em 1em 1em;
+}
+#grandAmount {
+    padding: 1em 5em 1em 2em;
+    font-weight: bold;
+}
+
+.grandTxt{
+    padding: 1em 3em 1em 1em;
+    font-weight: bold;
+}
+
+button{
+    background-color: #008700;
+    margin-left: 20em;
+    margin-right: 20em;
+    color: white;
+    margin-top: 40px;
+    padding: .5em 1.5em .5em 1.5em;
+    margin: auto;
+    font-size: 24px;
 }
 
 @media only screen and (min-width: 480px) {
