@@ -225,7 +225,9 @@ button , #purchase, #process {
  /*Brandon AddedtoCart*/
 
  .addedToCart {
-   background-color: #000;
+   background-color: #eeex;
+   border: 1px solid #ccc;
+   border-radius: 4px;
  }
 
  .item:hover {
