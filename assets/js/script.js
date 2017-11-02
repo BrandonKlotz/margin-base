@@ -14,14 +14,23 @@ $(function() {
 	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 1, category: "edibles"},
 	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 1, category: "edibles"},
 
-	{ id: 70, name: "Bowl", description: "rainbow bowl", price: 1, category: "accessories"},
-	{ id: 71, name: "Grinder", description: "not grindr", price: 1, category: "accessories"}
+	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 1, category: "accessories"},
+	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 1, category: "accessories"}
 	];	
 
-function listItems() {   
+function listItems() {
+	let wrapper = $('.wrapper');
+	let currentCategory = "";
     items.forEach(function(item) {   
-
-    	let wrapper = $('.wrapper');
+    	if( item.category === currentCategory){
+   			console.log(item.category);
+    	}
+    	else {
+    		let category = '<div class="categoryHead">' + item.category.toUpperCase() + '</div>';
+    		wrapper.append(category);
+    		currentCategory = item.category;
+    	}
+    
     	let menuItem = '<div class="item">' + item.name + '</div>';
     	wrapper.append(menuItem);
 
