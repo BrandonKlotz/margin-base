@@ -41,11 +41,10 @@
 	    addClick();
 	  }
 
-	  function addClick(items) {
+		function addClick() {
 	  		$('div.item').on('click', function(){
 
 				// temp code here while I figure this out
-
 				//shoppingCart.push($(this));
 				$(this).addClass('addedToCart');
 
@@ -62,12 +61,6 @@
 
  				shoppingCart.push(purchasedItem);
  				console.log(shoppingCart);
-
-				console.log('Purchased Item ' + purchasedItem);
-
-				shoppingCart.push(purchasedItem);
-
-				console.log('Shopping Cart ' + shoppingCart);
 
 				// Changes CartEmpty to CartActive
 				if ($('div.item').hasClass('addedToCart')) {
@@ -161,11 +154,20 @@ $('#cart-icon').on('click', function() { //
 	$('.cart').css('display', 'flex');
 
 	if ($('div.item').hasClass('addedToCart')) {
+		// displaying cart items
+		let cartSubtotal = 0;
+		shoppingCart.forEach(function(cart){
+			let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
+			$('.cartItems').append(cartItem);	
+			let itemPrice = cart.price;
+			cartSubtotal += itemPrice;
+		});
 
-	shoppingCart.forEach(function(cart){
-		let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
-	});
-	$('.cartItems').append(cartItem);
+		let cartTax = cartSubtotal * 0.06;
+		let cartTotal = cartSubtotal + cartTax;
+		$('div.subTotal').text(cartSubtotal);
+		$('div.taxTotal').text(cartTax);
+		$('div#grandAmount').text(cartTotal);
 	}
 
 });
