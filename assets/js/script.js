@@ -37,29 +37,36 @@
 	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'</span></div>';
 	    	wrapper.append(menuItem);
 	    });
-	    // you have to call the addButtons function after they've been created!
-	    addClick();
+	    // you have to call the addClick function after the buttons have been created!
+	  	addClick();
 	  }
 
-	  function addClick() {
-	  		$('div.item').on('click', function(){
-				
-				// temp code here while I figure this out
-				$(this).addClass('addedToCart');
-				let newItem = this.id;
-				console.log(newItem);
+//Holly's bad code!!
+	// function addClick() {
+	// 	//let newItemId;
+	// 	//let newItem;
+ //  		$('div.item').on('click', function(){
+			
+	// 		$(this).addClass('addedToCart');
+	// 		let newItemId = this.id;
+	// 		console.log(newItemId);
 
+	// 		let newItem = items.find(function(item){
+	// 			return item.id === newItemId;
+	// 		});
 
-				// how do we push the item data to the shoppingCart array?
-				//let selectedItem = $(this).id;
-				//console.log(selectedItem);
+	// 		console.log(newItem);
 
-			});
-	  }
+	// 		shoppingCart.push(newItem);
+	// 		console.log(shoppingCart);
+	// 	});
 
+		
+	// }
 
 	$(listItems);
 
+// more code below!!
 
 
 
