@@ -37,22 +37,30 @@
 	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'</span></div>';
 	    	wrapper.append(menuItem);
 	    });
-	    // you have to call the addClick function after the buttons have been created!
-	  	addClick();
+	    // you have to call the addButtons function after they've been created!
+	    addClick();
 	  }
 
 	  function addClick() {
 	  		$('div.item').on('click', function(){
 
 				// temp code here while I figure this out
-				shoppingCart.push($(this));
+				//shoppingCart.push($(this));
 				$(this).addClass('addedToCart');
-				let newItem = this.id;
+
+				// this.id returns a string, convert it to a number
+				let newItem = parseInt(this.id);
+
 				console.log(newItem);
 
-	// 		let newItem = items.find(function(item){
-	// 			return item.id === newItemId;
-	// 		});
+				let purchasedItem = items.find(function(item){
+  					return item.id === newItem;
+				});
+
+				//console.log(purchasedItem);
+
+ 				shoppingCart.push(purchasedItem);
+ 				console.log(shoppingCart);
 
 
 
@@ -68,16 +76,12 @@
 				//let selectedItem = $(this).id;
 				//console.log(selectedItem);
 
-	// 		shoppingCart.push(newItem);
-	// 		console.log(shoppingCart);
-	// 	});
+			});
+	  }
 
-		
-	// }
 
 	$(listItems);
 
-// more code below!!
 
 
 
@@ -168,12 +172,15 @@ $('#purchase').on('click', function() {
 $('#cash').on('click', function() {
 	$('.spacer').css('display', 'none');
 	$('.payment').css('display', 'flex');
+	$('.credit').css('display', 'none');
 	$('.cash').css('display', 'flex');
 });
 
 $('#credit').on('click', function() {
+	$('.spacer').css('display', 'none');
 	$('.payment').css('display', 'flex');
 	$('.credit').css('display', 'flex');
+	$('.cash').css('display', 'none');
 });
 
 $('#process').on('click', function() {
