@@ -189,7 +189,7 @@ button , #purchase, #process {
 }
 
 #cash, #credit {
-    font-size: 14px;
+    font-size: 1.5em;
     background-color: white;
     color: #008700;
 }
@@ -201,6 +201,40 @@ button , #purchase, #process {
 
 .process {
     display: none;
+}
+
+.paymentDetails {
+    font-size: 1.5em;
+   
+}
+
+.sectionHeader {
+    display: flex;
+    text-align: left;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eee;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-size: 1.3em;
+    padding: 1em;
+
+}
+
+.inputDetails {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    font-size: 1em;
+}
+
+#creditCardNumber, #cardHolder, #cardExpire, #cvv {
+    width: 400px;
 }
 
 @media only screen and (min-width: 480px) {
