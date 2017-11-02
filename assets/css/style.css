@@ -12,9 +12,9 @@ p {
 }
 
 * {
+  color: #888;
   font-family: 'Saira Semi Condensed', sans-serif;
   font-weight: 400;
-  color: #888;
 }
 
 body {
@@ -173,7 +173,7 @@ button , #purchase, #process {
 
 .flexPayment {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 #purchase {
@@ -185,11 +185,41 @@ button , #purchase, #process {
     background-color: white;
     color: #008700;
 }
+
+
+
+
+
 @media only screen and (min-width: 480px) {
 
   .wrapper {
       display: flex;
       width: 70%;
+
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+ /*Brandon AddedtoCart*/
+
+ .addedToCart {
+   background-color: #000;
+ }
+
+ .item:hover {
+     background-color: #eee;
+     cursor: pointer;
+ }
+
+#cart-icon {
+  margin-right: 2em;
 }
