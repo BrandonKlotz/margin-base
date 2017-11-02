@@ -17,7 +17,7 @@
 
 	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 10.01, category: "accessories"},
 	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.01, category: "accessories"}
-	];	
+	];
 
 	// shopping cart array
 	const shoppingCart = [];
@@ -43,12 +43,22 @@
 
 	  function addClick() {
 	  		$('div.item').on('click', function(){
-				
+
 				// temp code here while I figure this out
 				$(this).addClass('addedToCart');
 				let newItem = this.id;
 				console.log(newItem);
 
+
+
+
+
+				// Changes CartEmpty to CartActive
+				if ($('div.item').hasClass('addedToCart')) {
+					$('#cart-icon').attr('src', 'assets/img/CartActive.svg');
+				} else {
+					$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
+				}
 
 				// how do we push the item data to the shoppingCart array?
 				//let selectedItem = $(this).id;
@@ -142,11 +152,15 @@ $('#process').on('click', function() {
 $('#done').on('click', function() {
 	$('.reciept').css('display', 'none');
 	$('.menu').css('display', 'flex');
+
+	if ($('div.item').hasClass('addedToCart')) {
+		$('div.item').removeClass('addedToCart');
+		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
+	}
+	
 });
 
-if (items.hasClass('.addedToCart')) {
-	$('#cart-icon img').attr('src','assets/img/CartActive.svg');
-}
+
 
 })();
 // end of wrapping function!!
