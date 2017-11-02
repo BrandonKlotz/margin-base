@@ -19,10 +19,10 @@
 		</div>
 
 			<div class ="mainContain">
-				<div class = "wrapper cartView">
+				<div class = "wrapper cart">
 					<div class="categoryHead">Cart Summary</div>
-					<div class="item">Items</div>
-					<div class = "addedToCart"></div>
+					<div class="sectionHeader">Items</div>
+					<div class = "cartItems"></div>
 						<div id= "border"></div>
 					<div class="flexTotals">
 						<div class= "border"></div>
@@ -43,9 +43,9 @@
 			</div>
 
 			<div class ="mainContain">
-				<div class = "wrapper paymentView">
+				<div class = "wrapper payment">
 					<div class="categoryHead">Payment Details</div>
-					<div class="item">Method of Payment</div>
+					<div class ="sectionHeader">Method of Payment</div>
 					<div class= "flexPayment">
 						<button id= "cash">CASH</button>
 						<button id= "credit">CREDIT</button>
@@ -54,9 +54,14 @@
 			</div>
 		</div>
 			<div class ="mainContain">
-				<div class= "wrapper processView">
+				<div class= "wrapper process">
 					<div class= "paymentDetails">
-							<input type="text" id= "creditCardNumber" placeholder="Credit Card No">
+						<div class = inputDetails sectionHeader>
+								<label id = "cardHolder">Name:<input type="text" placeholder="John Smith" ></label>
+								<label id = "creditCardNumber">Credit Card:<input type="text" placeholder="0000 0000 0000 0000" ></label>
+								<label id = "cardExpire">Exp Date:<input type="text" placeholder="07/21" ></label>
+								<label id = "cvv">CVV:<input type="text" placeholder="000" ></label>
+						</div>
 					</div>
 				</div>
 			</div>
