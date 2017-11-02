@@ -41,6 +41,8 @@ img {
 .mainContain{
     display: flex;
     justify-content: center;
+    margin-top: 0;
+    margin-bottom: 6em;
 }
 
 .wrapper {
@@ -161,13 +163,11 @@ nav {
 
 button{
     background-color: #008700;
-    margin-left: 20em;
-    margin-right: 20em;
     color: white;
-    margin-top: 40px;
     padding: .5em 1.5em .5em 1.5em;
-    margin: auto;
+    margin: 0 auto;
     font-size: 24px;
+    margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 480px) {
