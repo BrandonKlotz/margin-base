@@ -136,7 +136,7 @@ $('#done').on('click', function() {
 });
 
 if (items.hasClass('.addedToCart')) {
-	$('#cart-icon').attr('src','assets/img/CartActive.svg')
+	$('#cart-icon img').attr('src','assets/img/CartActive.svg');
 }
 
 })();
