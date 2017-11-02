@@ -143,7 +143,7 @@ $('#logo').on('click', function() {
 		$('div.item').removeClass('addedToCart');
 		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 	}
-
+	$('.cartItems').empty();
 });
 
 $('#cart-icon').on('click', function() { //
