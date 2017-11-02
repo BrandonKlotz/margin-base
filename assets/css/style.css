@@ -104,6 +104,7 @@ nav {
     margin-top: .5em;
     font-size: 1.3em;
     padding: 1em;
+    cursor: pointer;
 }
 
 .cartView {
@@ -129,7 +130,7 @@ nav {
 
 }
 
-#border{
+.border{
     border-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ccc;
@@ -161,7 +162,7 @@ nav {
     font-weight: bold;
 }
 
-button{
+button , #purchase, #process {
     background-color: #008700;
     color: white;
     padding: .5em 1.5em .5em 1.5em;
@@ -170,6 +171,20 @@ button{
     margin-bottom: 2em;
 }
 
+.flexPayment {
+    display: flex;
+    justify-content: center;  
+}
+
+#purchase {
+
+}
+
+#cash, #credit {
+    font-size: 14px;
+    background-color: white;
+    color: #008700;
+}
 @media only screen and (min-width: 480px) {
 
   .wrapper {
