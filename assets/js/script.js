@@ -41,25 +41,26 @@
 	    addClick();
 	  }
 
-	  function addClick(items) {
+		function addClick() {
 	  		$('div.item').on('click', function(){
 
 				// temp code here while I figure this out
+				//shoppingCart.push($(this));
 				$(this).addClass('addedToCart');
-				// shoppingCart.push($(this));
 
-				let newItem = this.id;
-				// console.log(newItem);
+				// this.id returns a string, convert it to a number
+				let newItem = parseInt(this.id);
+
+				console.log(newItem);
 
 				let purchasedItem = items.find(function(item){
-				  return item.id === newItem;
+  					return item.id === newItem;
 				});
 
-				console.log('Purchased Item ' + purchasedItem);
+				//console.log(purchasedItem);
 
-				shoppingCart.push(purchasedItem);
-
-				console.log('Shopping Cart ' + shoppingCart);
+ 				shoppingCart.push(purchasedItem);
+ 				console.log(shoppingCart);
 
 				// Changes CartEmpty to CartActive
 				if ($('div.item').hasClass('addedToCart')) {
@@ -156,8 +157,9 @@ $('#cart-icon').on('click', function() { //
 
 	shoppingCart.forEach(function(cart){
 		let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
+		$('.cartItems').append(cartItem);
 	});
-	$('.cartItems').append(cartItem);
+
 	}
 
 });
