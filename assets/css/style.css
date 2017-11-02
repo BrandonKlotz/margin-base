@@ -12,9 +12,9 @@ p {
 }
 
 * {
+  color: #888;
   font-family: 'Saira Semi Condensed', sans-serif;
   font-weight: 400;
-  color: #888;
 }
 
 body {
@@ -39,7 +39,7 @@ img {
     display: flex;
 }
 .mainContain{
-    display: flex;
+    display:flex;
     justify-content: center;
     margin-top: 0;
     margin-bottom: 6em;
@@ -47,6 +47,16 @@ img {
 
 .wrapper {
     display: flex;
+    width: 468px;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#menu{
+    display: none;
     width: 468px;
     margin-top: 64px;
     background-color: white;
@@ -104,9 +114,11 @@ nav {
     margin-top: .5em;
     font-size: 1.3em;
     padding: 1em;
+    cursor: pointer;
 }
 
-.cartView {
+.cart {
+    display:none;
 
 }
 
@@ -129,7 +141,7 @@ nav {
 
 }
 
-#border{
+.border{
     border-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #ccc;
@@ -151,6 +163,7 @@ nav {
 .taxTxt{
     padding: 1em 3em 1em 1em;
 }
+
 #grandAmount {
     padding: 1em 5em 1em 2em;
     font-weight: bold;
@@ -161,7 +174,7 @@ nav {
     font-weight: bold;
 }
 
-button{
+button , #purchase, #process {
     background-color: #008700;
     color: white;
     padding: .5em 1.5em .5em 1.5em;
@@ -170,11 +183,96 @@ button{
     margin-bottom: 2em;
 }
 
+.flexPayment {
+    display: flex;
+    justify-content: center;
+}
+
+#cash, #credit {
+    font-size: 1.5em;
+    background-color: white;
+    color: #008700;
+}
+
+.payment {
+    display: none;
+    margin-top: 0;
+}
+
+.process {
+    display: none;
+}
+
+.paymentDetails {
+    font-size: 1.5em;
+   
+}
+
+.sectionHeader {
+    display: flex;
+    text-align: left;
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eee;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-size: 1.3em;
+    padding: 1em;
+
+}
+
+.inputDetails {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input {
+    font-size: 1em;
+}
+
+#creditCardNumber, #cardHolder, #cardExpire, #cvv {
+    width: 400px;
+}
+
 @media only screen and (min-width: 480px) {
 
   .wrapper {
       display: flex;
       width: 70%;
+
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+ /*Brandon AddedtoCart*/
+
+ .addedToCart {
+   background-color: #eeex;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+ .item:hover {
+     background-color: #eee;
+     cursor: pointer;
+ }
+
+#cart-icon {
+  margin-right: 2em;
+}
+
+.spacer {
+  height: 100px;
 }
