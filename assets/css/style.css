@@ -3,6 +3,7 @@
 h1 {
   font-family: 'Saira Semi Condensed', sans-serif;
   font-weight: 700;
+  font-size: 3em;
 }
 
 p {
@@ -26,6 +27,14 @@ img {
   width: 60px;
 }
 
+.submit {
+  width: 200px;
+  height: 80px;
+  color: #fff;
+  font-size: 2em;
+  background-color: #008700;
+}
+
 .navContain {
     display: flex;
 }
@@ -37,7 +46,7 @@ img {
 .wrapper {
     display: flex;
     width: 468px;
-    margin-top: 98px;
+    margin-top: 64px;
     background-color: white;
     justify-content: center;
     flex-direction: column;
@@ -56,12 +65,37 @@ img {
     font-size: 1.3em;
     padding-top: 10px;
     padding-bottom: 10px;
+}
 
+.cart {
+  display: none;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.recieptContainer {
+  border-bottom-color: #eee;
+  border-bottom-style: solid;
+  border-top-color: #eee;
+  border-top-style: solid;
+  border-width: 1px;
+  margin: 2em;
+  padding: 2em;
+}
+
+.recieptTotal {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 
 #cart {
-    display: flex;
     background-color: white;
+    display: flex;
     padding: .5em;
     /*margin: 1em;*/
 }
@@ -84,11 +118,10 @@ nav {
 
 .item {
     display: flex;
-    /*justify-content: center;*/
     text-align: left;
     border-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: #ccc;
+    border-bottom-color: #eee;
     margin-right: 2em;
     margin-left: 2em;
     margin-bottom: .5em;
@@ -97,14 +130,15 @@ nav {
     padding: 1em;
 }
 
+.item:hover {
+  background-color: #eee;
+}
+
 @media only screen and (min-width: 480px) {
 
   .wrapper {
       display: flex;
       width: 70%;
   }
-
-
-
 
 }

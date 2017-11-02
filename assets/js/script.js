@@ -1,5 +1,5 @@
 
-$(function() {
+(function() {
 
 	const items = [
 	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 1, category: "smokeables"},
@@ -16,26 +16,25 @@ $(function() {
 
 	{ id: 70, name: "Bowl", description: "rainbow bowl", price: 1, category: "accessories"},
 	{ id: 71, name: "Grinder", description: "not grindr", price: 1, category: "accessories"}
-	];	
+	];
 
 
-// for (var i=0; i<items.length; i++) { 
+// for (var i=0; i<items.length; i++) {
 
 // 	console.log(`${items[i].id} ${items[i].name} ${items[i].description} ${items[i].category}`);
 // }
 
-let itemDetails = "";
-	$.each(items, function(index, object) {
-	   $.each(object,function(attribute, value){
-	     //console.log(`${value}`);
-	     // do something with each attribute and value, like concat a variable?
-	     itemDetails = itemDetails + " " + value;
-	     console.log(itemDetails);
-	   });
-	});
+// let itemDetails = "";
+// 	$.each(items, function(index, object) {
+// 	   $.each(object,function(attribute, value){
+// 	     //console.log(`${value}`);
+// 	     // do something with each attribute and value, like concat a variable?
+// 	     itemDetails = itemDetails + " " + value;
+// 	     console.log(itemDetails);
+// 	   });
+// 	});
 
-});
-// end of wrapping function!!
+
 
 
 //Ross calls this a document-ready YO, confirms page is loading properly
@@ -43,3 +42,82 @@ let itemDetails = "";
      alert("yo");
  });
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Brandon's Hooking up buttons
+
+$('#cart-icon').on('click', function() {
+	$('.menu').css('display', 'none');
+	$('.cart').css('display', 'flex');
+});
+
+$('#purchase').on('click', function() {
+	$('.cart').css('display', 'none');
+});
+
+$('#cash').on('click', function() {
+	$('').css('display', 'none');
+});
+
+$('#card').on('click', function() {
+	$('').css('display', 'none');
+});
+
+$('#process').on('click', function() {
+	$('').css('display', 'none');
+});
+
+})();
+// end of wrapping function!!
