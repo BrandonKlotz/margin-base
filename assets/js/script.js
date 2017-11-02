@@ -156,12 +156,24 @@ $('#cart-icon').on('click', function() { //
 	$('.cart').css('display', 'flex');
 
 	if ($('div.item').hasClass('addedToCart')) {
+		// displaying cart items
+		let cartSubtotal = 0;
+		shoppingCart.forEach(function(cart){
+			let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
+			$('.cartItems').append(cartItem);
+			let itemPrice = cart.price;
+			cartSubtotal += itemPrice;
+		});
 
-	shoppingCart.forEach(function(cart){
-		let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
-		$('.cartItems').append(cartItem);
-	});
+		function round(tax, decimals) {
+  			return Number(Math.round(tax+'e'+decimals)+'e-'+decimals);
+		}
 
+		let cartTax = round(cartSubtotal * 0.06, 2);
+		let cartTotal = cartSubtotal + cartTax;
+		$('div.subTotal').text(cartSubtotal);
+		$('div.taxTotal').text(cartTax);
+		$('div#grandAmount').text(cartTotal);
 	}
 
 });
