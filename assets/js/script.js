@@ -3,20 +3,20 @@
 
 	const items = [
 
-	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 10.00, category: "smokeables"},
-	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 10.00, category: "smokeables"},
-	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 10.00, category: "smokeables"},
-	{ id: 13, name: "Maui Wowie", description: "island weed", price: 10.00, category: "smokeables"},
-	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 10.00, category: "smokeables"},
-	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 10.00, category: "smokeables"},
+	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 10.01, category: "smokeables"},
+	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 10.01, category: "smokeables"},
+	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 10.01, category: "smokeables"},
+	{ id: 13, name: "Maui Wowie", description: "island weed", price: 10.01, category: "smokeables"},
+	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 10.01, category: "smokeables"},
+	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 10.01, category: "smokeables"},
 
-	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 10.00, category: "edibles"},
-	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 10.00, category: "edibles"},
-	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 10.00, category: "edibles"},
-	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.00, category: "edibles"},
+	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 10.01, category: "edibles"},
+	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 10.01, category: "edibles"},
+	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 10.01, category: "edibles"},
+	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.01, category: "edibles"},
 
-	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 10.00, category: "accessories"},
-	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.00, category: "accessories"}
+	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 10.01, category: "accessories"},
+	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.01, category: "accessories"}
 	];	
 
 	// shopping cart array
@@ -34,7 +34,7 @@
 	    		currentCategory = item.category;
 	    	}
 	    	// add each item div
-	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'.00</span></div>';
+	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'</span></div>';
 	    	wrapper.append(menuItem);
 	    });
 	    // you have to call the addButtons function after they've been created!
@@ -43,9 +43,13 @@
 
 	  function addClick() {
 	  		$('div.item').on('click', function(){
-				console.log("clicked it");
+				
 				// temp code here while I figure this out
 				$(this).addClass('addedToCart');
+				let newItem = this.id;
+				console.log(newItem);
+
+
 				// how do we push the item data to the shoppingCart array?
 				//let selectedItem = $(this).id;
 				//console.log(selectedItem);
