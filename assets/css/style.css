@@ -46,37 +46,37 @@ img {
 }
 
 .wrapper {
-    display: flex;
-    width: 468px;
-    background-color: white;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: flex;
+  width: 468px;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #menu{
-    display: none;
-    width: 468px;
-    margin-top: 64px;
-    background-color: white;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: none;
+  width: 468px;
+  margin-top: 64px;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .categoryHead {
-    width: 100%;
-    height: 20px;
-    display: flex;
-    background-color: #008700;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  background-color: #008700;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #cart {
@@ -181,6 +181,8 @@ button , #purchase, #process {
     margin: 0 auto;
     font-size: 24px;
     margin-bottom: 2em;
+    border-radius: 5px;
+    border: 2px solid #008700 ;
 }
 
 .flexPayment {
@@ -199,13 +201,28 @@ button , #purchase, #process {
     margin-top: 0;
 }
 
+.wrapper .payment {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .process {
     display: none;
 }
 
-.paymentDetails {
+.credit {
+  font-size: 1.5em;
+  display: none;
+  margin-bottom: 0;
+}
+
+.cash {
     font-size: 1.5em;
-   
+<<<<<<< HEAD
+    display: none;
+=======
+
+>>>>>>> style-feature
 }
 
 .sectionHeader {
@@ -220,21 +237,40 @@ button , #purchase, #process {
     margin-top: .5em;
     font-size: 1.3em;
     padding: 1em;
-
 }
 
 .inputDetails {
     display: flex;
     flex-direction: column;
-    
+<<<<<<< HEAD
+
 }
 
 input {
-    font-size: 1em;
+    font-size: .7em;
+    color: #eee;
+=======
 }
 
-#creditCardNumber, #cardHolder, #cardExpire, #cvv {
-    width: 400px;
+input {
+    font-size: .5em;
+>>>>>>> style-feature
+}
+
+label {
+  font-size: .7em;
+}
+
+#emailBtn {
+    background-color: white;
+    color: #008700;
+    padding: .5em 1.5em .5em 1.5em;
+    margin: 0 auto;
+    font-size: 24px;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    border: 2px solid #008700
+    
 }
 
 @media only screen and (min-width: 480px) {
@@ -242,7 +278,10 @@ input {
   .wrapper {
       display: flex;
       width: 70%;
+  }
 
+  input {
+      font-size: .5em;
   }
 
 }
@@ -258,16 +297,16 @@ input {
 
  /*Brandon AddedtoCart*/
 
- .addedToCart {
-   background-color: #eeex;
-   border: 1px solid #ccc;
-   border-radius: 4px;
- }
+.addedToCart {
+ background-color: #eeex;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
 
- .item:hover {
-     background-color: #eee;
-     cursor: pointer;
- }
+.item:hover {
+   background-color: #eee;
+   cursor: pointer;
+}
 
 #cart-icon {
   margin-right: 2em;
