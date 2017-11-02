@@ -244,6 +244,7 @@ button , #purchase, #process {
 input {
     font-size: .5em;
     margin-left: 2em; 
+    width: 12em;
 }
 
 label {
