@@ -39,7 +39,7 @@ img {
     display: flex;
 }
 .mainContain{
-    display: flex;
+    display:flex;
     justify-content: center;
     margin-top: 0;
     margin-bottom: 6em;
@@ -47,6 +47,16 @@ img {
 
 .wrapper {
     display: flex;
+    width: 468px;
+    margin-top: 64px;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#menu{
+    display: none;
     width: 468px;
     margin-top: 64px;
     background-color: white;
@@ -108,7 +118,7 @@ nav {
 }
 
 .cartView {
-
+    display:none;
 }
 
 .cartItem {
@@ -152,6 +162,7 @@ nav {
 .taxTxt{
     padding: 1em 3em 1em 1em;
 }
+
 #grandAmount {
     padding: 1em 5em 1em 2em;
     font-weight: bold;
@@ -176,18 +187,19 @@ button , #purchase, #process {
     justify-content: center;
 }
 
-#purchase {
-
-}
-
 #cash, #credit {
     font-size: 14px;
     background-color: white;
     color: #008700;
 }
 
+.paymentView {
+    display:flex;
+}
 
-
+.processView {
+    display: flex;
+}
 
 @media only screen and (min-width: 480px) {
 
