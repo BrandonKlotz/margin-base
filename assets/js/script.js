@@ -1,7 +1,8 @@
 
-$(function() {
+(function() {
 
 	const items = [
+
 	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 10.00, category: "smokeables"},
 	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 10.00, category: "smokeables"},
 	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 10.00, category: "smokeables"},
@@ -18,13 +19,14 @@ $(function() {
 	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.00, category: "accessories"}
 	];	
 
+
 	const shoppingCart = [];
 
 	// insert items into index.html
 	function listItems() {
 		let wrapper = $('.wrapper');
 		let currentCategory = "";
-	    items.forEach(function(item) {   
+	    items.forEach(function(item) {
 	    	// insert category div if necessary
 	    	if( item.category !== currentCategory){
 	    		let category = '<div class="categoryHead">' + item.category.toUpperCase() + '</div>';
@@ -47,18 +49,87 @@ $(function() {
 				// how do we push the item data to the shoppingCart array?
 				//let selectedItem = $(this).id;
 				//console.log(selectedItem);
+
 			});
 	  }
 
 
 	$(listItems);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Brandon's Hooking up buttons
+
+$('#cart-icon').on('click', function() {
+	$('.menu').css('display', 'none');
+	$('.cart').css('display', 'flex');
 });
+
+$('#purchase').on('click', function() {
+	$('.cart').css('display', 'none');
+});
+
+$('#cash').on('click', function() {
+	$('').css('display', 'none');
+});
+
+$('#card').on('click', function() {
+	$('').css('display', 'none');
+});
+
+$('#process').on('click', function() {
+	$('').css('display', 'none');
+});
+
+})();
 // end of wrapping function!!
-
-
-//Ross calls this a document-ready YO, confirms page is loading properly
-/* $(function() {
-     alert("yo");
- });
- */
