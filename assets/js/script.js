@@ -9,8 +9,8 @@ $(function() {
 	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 1, category: "smokeables"},
 	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 1, category: "smokeables"},
 
-	{ id: 50, name: "Gummies", description: "marijuana-infused gummy candy", price: 1, category: "edibles"},
-	{ id: 51, name: "Special Brownies", description: "weed-laced brownies", price: 1, category: "edibles"},
+	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 1, category: "edibles"},
+	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 1, category: "edibles"},
 	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 1, category: "edibles"},
 	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 1, category: "edibles"},
 
@@ -18,21 +18,19 @@ $(function() {
 	{ id: 71, name: "Grinder", description: "not grindr", price: 1, category: "accessories"}
 	];	
 
+function listItems() {   
+    items.forEach(function(item) {   
 
-// for (var i=0; i<items.length; i++) { 
+    	let wrapper = $('.wrapper');
+    	let menuItem = '<div class="item">' + item.name + '</div>';
+    	wrapper.append(menuItem);
 
-// 	console.log(`${items[i].id} ${items[i].name} ${items[i].description} ${items[i].category}`);
-// }
+    	// track currentCategory to determine whether to add a category div
+    });
+  }
 
-let itemDetails = "";
-	$.each(items, function(index, object) {
-	   $.each(object,function(attribute, value){
-	     console.log(`${value}`);
-	     // do something with each attribute and value, like concat a variable?
-	     // itemDetails = itemDetails + " " + value;
-	     // console.log(itemDetails);
-	   });
-	});
+$(listItems);
+
 
 });
 // end of wrapping function!!
