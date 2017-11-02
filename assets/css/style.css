@@ -138,6 +138,8 @@ nav {
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+    margin-right: 6em;
 
 }
 
@@ -165,7 +167,6 @@ nav {
 }
 
 #grandAmount {
-    padding: 1em 5em 1em 2em;
     font-weight: bold;
 }
 
@@ -242,11 +243,13 @@ button , #purchase, #process {
 
 input {
     font-size: .5em;
+    margin-left: 2em; 
 }
 
 label {
-  font-size: .7em;
+    font-size: .7em;
 }
+
 
 #emailBtn {
     background-color: white;
@@ -256,8 +259,11 @@ label {
     font-size: 24px;
     margin-bottom: 2em;
     border-radius: 5px;
-    border: 2px solid #6CBC61
+    border: 2px solid #6CBC61;
+}
 
+#cashTender, #change {
+    margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 480px) {
