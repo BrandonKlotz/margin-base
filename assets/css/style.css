@@ -96,7 +96,7 @@ nav {
 }
 
 .cartView {
-    display: none;
+
 }
 
 .cartItem {
@@ -104,7 +104,7 @@ nav {
     justify-content: left;
     text-align: left;
     margin-right: 2em;
-    margin-left: 2em;
+    margin-left: 4em;
     margin-bottom: .5em;
     margin-top: .5em;
     font-size: 1em;
@@ -156,9 +156,9 @@ button{
     margin-right: 20em;
     color: white;
     margin-top: 40px;
-    padding: .75em 2em .75em 2em;
+    padding: .5em 1.5em .5em 1.5em;
     margin: auto;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 
