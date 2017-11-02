@@ -199,13 +199,24 @@ button , #purchase, #process {
     margin-top: 0;
 }
 
+.wrapper .payment {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .process {
     display: none;
 }
 
-.paymentDetails {
+.credit {
+  font-size: 1.5em;
+  display: none;
+  margin-bottom: 0;
+}
+
+.cash {
     font-size: 1.5em;
-   
+    display: none;
 }
 
 .sectionHeader {
@@ -226,15 +237,16 @@ button , #purchase, #process {
 .inputDetails {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 input {
-    font-size: 1em;
+    font-size: .7em;
+    color: #eee;
 }
 
-#creditCardNumber, #cardHolder, #cardExpire, #cvv {
-    width: 400px;
+label {
+  font-size: .7em;
 }
 
 @media only screen and (min-width: 480px) {
@@ -258,16 +270,16 @@ input {
 
  /*Brandon AddedtoCart*/
 
- .addedToCart {
-   background-color: #eeex;
-   border: 1px solid #ccc;
-   border-radius: 4px;
- }
+.addedToCart {
+ background-color: #eeex;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
 
- .item:hover {
-     background-color: #eee;
-     cursor: pointer;
- }
+.item:hover {
+   background-color: #eee;
+   cursor: pointer;
+}
 
 #cart-icon {
   margin-right: 2em;

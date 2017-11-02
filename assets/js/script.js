@@ -161,12 +161,15 @@ $('#purchase').on('click', function() {
 $('#cash').on('click', function() {
 	$('.spacer').css('display', 'none');
 	$('.payment').css('display', 'flex');
+	$('.credit').css('display', 'none');
 	$('.cash').css('display', 'flex');
 });
 
 $('#credit').on('click', function() {
+	$('.spacer').css('display', 'none');
 	$('.payment').css('display', 'flex');
 	$('.credit').css('display', 'flex');
+	$('.cash').css('display', 'none');
 });
 
 $('#process').on('click', function() {
