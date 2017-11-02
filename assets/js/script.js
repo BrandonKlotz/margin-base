@@ -44,21 +44,12 @@
 				// where this refers to the button, not the item
 				// how do we push the item data to the shoppingCart array?
 
-				//let selectedItem = $(this).item.name;
+				let selectedItem = $(this).item.name;
 			});
 	  }
 
 
 	$(listItems);
-
-
-
-//Ross calls this a document-ready YO, confirms page is loading properly
-/* $(function() {
-     alert("yo");
- });
- */
-
 
 
 
