@@ -56,7 +56,6 @@ img {
     font-size: 1.3em;
     padding-top: 10px;
     padding-bottom: 10px;
-
 }
 
 #cart {
@@ -84,7 +83,6 @@ nav {
 
 .item {
     display: flex;
-    /*justify-content: center;*/
     text-align: left;
     border-width: 1px;
     border-bottom-style: solid;
@@ -96,6 +94,73 @@ nav {
     font-size: 1.3em;
     padding: 1em;
 }
+
+.cartView {
+    
+}
+
+.cartItem {
+    display:flex;
+    justify-content: left;
+    text-align: left;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.flexTotals {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+#border{
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ccc;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    margin-top: .5em;
+    font-size: 1.3em;
+}
+
+.subTxt{
+    padding: 1em 3em 1em 1em;
+}
+
+.amount {
+    padding: 1em 5em 1em 2em;  
+}
+
+.taxTxt{
+    padding: 1em 3em 1em 1em;
+}
+#grandAmount {
+    padding: 1em 5em 1em 2em;
+    font-weight: bold;
+}
+
+.grandTxt{
+    padding: 1em 3em 1em 1em;
+    font-weight: bold;
+}
+
+button{
+    background-color: #008700;
+    margin-left: 20em;
+    margin-right: 20em;
+    color: white;
+    margin-top: 60px;
+    padding: .75em 2em .75em 2em;
+    margin: auto;
+    font-size: 18px;
+}
+
 
 @media only screen and (min-width: 480px) {
 
