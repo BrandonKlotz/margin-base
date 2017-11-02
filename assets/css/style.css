@@ -48,13 +48,13 @@ img {
 .wrapper {
     display: flex;
     width: 468px;
-    margin-top: 100px;
     background-color: white;
     justify-content: center;
     flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 #menu{
     display: none;
     width: 468px;
@@ -117,8 +117,9 @@ nav {
     cursor: pointer;
 }
 
-.cartView {
+.cart {
     display:none;
+
 }
 
 .cartItem {
@@ -193,12 +194,13 @@ button , #purchase, #process {
     color: #008700;
 }
 
-.paymentView {
-    display:flex;
+.payment {
+    display: none;
+    margin-top: 0;
 }
 
-.processView {
-    display: flex;
+.process {
+    display: none;
 }
 
 .paymentDetails {
@@ -257,7 +259,9 @@ input {
  /*Brandon AddedtoCart*/
 
  .addedToCart {
-   background-color: #000;
+   background-color: #eeex;
+   border: 1px solid #ccc;
+   border-radius: 4px;
  }
 
  .item:hover {
@@ -267,4 +271,8 @@ input {
 
 #cart-icon {
   margin-right: 2em;
+}
+
+.spacer {
+  height: 100px;
 }
