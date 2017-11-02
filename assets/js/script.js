@@ -112,19 +112,32 @@ $('#cart-icon').on('click', function() {
 
 $('#purchase').on('click', function() {
 	$('.cart').css('display', 'none');
+	$('.checkout').css('display', 'flex');
 });
 
 $('#cash').on('click', function() {
-	$('').css('display', 'none');
+	$('.checkout').css('display', 'flex');
+	$('.cash').css('display', 'flex');
 });
 
-$('#card').on('click', function() {
-	$('').css('display', 'none');
+$('#credit').on('click', function() {
+	$('.checkout').css('display', 'flex');
+	$('.credit').css('display', 'flex');
 });
 
 $('#process').on('click', function() {
-	$('').css('display', 'none');
+	$('.checkout').css('display', 'none');
+	$('.reciept').css('display', 'flex');
 });
+
+$('#done').on('click', function() {
+	$('.reciept').css('display', 'none');
+	$('.menu').css('display', 'flex');
+});
+
+if (items.hasClass('.addedToCart')) {
+	$('#cart-icon').attr('src','assets/img/CartActive.svg')
+}
 
 })();
 // end of wrapping function!!
