@@ -32,7 +32,7 @@ img {
   height: 80px;
   color: #fff;
   font-size: 2em;
-  background-color: #008700;
+  background-color: #6CBC61;
 }
 
 .navContain {
@@ -70,7 +70,7 @@ img {
   width: 100%;
   height: 20px;
   display: flex;
-  background-color: #008700;
+  background-color: #5790DC;
   color: white;
   justify-content: center;
   align-items: center;
@@ -175,14 +175,14 @@ nav {
 }
 
 button , #purchase, #process {
-    background-color: #008700;
+    background-color: #6CBC61;
     color: white;
     padding: .5em 1.5em .5em 1.5em;
     margin: 0 auto;
     font-size: 24px;
     margin-bottom: 2em;
     border-radius: 5px;
-    border: 2px solid #008700 ;
+    border: 2px solid #6CBC61 ;
 }
 
 .flexPayment {
@@ -193,7 +193,7 @@ button , #purchase, #process {
 #cash, #credit {
     font-size: 1.5em;
     background-color: white;
-    color: #008700;
+    color: #6CBC61;
 }
 
 .payment {
@@ -218,11 +218,7 @@ button , #purchase, #process {
 
 .cash {
     font-size: 1.5em;
-<<<<<<< HEAD
     display: none;
-=======
-
->>>>>>> style-feature
 }
 
 .sectionHeader {
@@ -242,19 +238,10 @@ button , #purchase, #process {
 .inputDetails {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-
-}
-
-input {
-    font-size: .7em;
-    color: #eee;
-=======
-}
+  }
 
 input {
     font-size: .5em;
->>>>>>> style-feature
 }
 
 label {
@@ -263,14 +250,14 @@ label {
 
 #emailBtn {
     background-color: white;
-    color: #008700;
+    color: #6CBC61;
     padding: .5em 1.5em .5em 1.5em;
     margin: 0 auto;
     font-size: 24px;
     margin-bottom: 2em;
     border-radius: 5px;
-    border: 2px solid #008700
-    
+    border: 2px solid #6CBC61
+
 }
 
 @media only screen and (min-width: 480px) {

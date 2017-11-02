@@ -144,6 +144,8 @@ $('#logo').on('click', function() {
 		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 	}
 
+	$('.cartItems').empty();
+
 });
 
 $('#cart-icon').on('click', function() { //
