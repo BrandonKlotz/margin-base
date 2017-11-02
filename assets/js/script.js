@@ -19,12 +19,12 @@
 	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.00, category: "accessories"}
 	];	
 
-
+	// shopping cart array
 	const shoppingCart = [];
 
 	// insert items into index.html
 	function listItems() {
-		let wrapper = $('.wrapper');
+		let wrapper = $('.wrapper.menu');
 		let currentCategory = "";
 	    items.forEach(function(item) {
 	    	// insert category div if necessary
@@ -33,9 +33,8 @@
 	    		wrapper.append(category);
 	    		currentCategory = item.category;
 	    	}
-	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + '</div>';
-
-	    	// let menuItem = '<div class="item">' + item.name + '&nbsp;<button class="addToCart" type="button"> + </button></div>';
+	    	// add each item div
+	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'.00</span></div>';
 	    	wrapper.append(menuItem);
 	    });
 	    // you have to call the addButtons function after they've been created!
@@ -45,7 +44,8 @@
 	  function addClick() {
 	  		$('div.item').on('click', function(){
 				console.log("clicked it");
-				$(this).addClass('selected');
+				// temp code here while I figure this out
+				$(this).addClass('addedToCart');
 				// how do we push the item data to the shoppingCart array?
 				//let selectedItem = $(this).id;
 				//console.log(selectedItem);
