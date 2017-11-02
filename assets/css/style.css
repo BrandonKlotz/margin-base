@@ -46,37 +46,37 @@ img {
 }
 
 .wrapper {
-    display: flex;
-    width: 468px;
-    background-color: white;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: flex;
+  width: 468px;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #menu{
-    display: none;
-    width: 468px;
-    margin-top: 64px;
-    background-color: white;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  display: none;
+  width: 468px;
+  margin-top: 64px;
+  background-color: white;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .categoryHead {
-    width: 100%;
-    height: 20px;
-    display: flex;
-    background-color: #008700;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.3em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  background-color: #008700;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #cart {
@@ -218,7 +218,11 @@ button , #purchase, #process {
 
 .cash {
     font-size: 1.5em;
+<<<<<<< HEAD
     display: none;
+=======
+
+>>>>>>> style-feature
 }
 
 .sectionHeader {
@@ -238,12 +242,19 @@ button , #purchase, #process {
 .inputDetails {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
 
 }
 
 input {
     font-size: .7em;
     color: #eee;
+=======
+}
+
+input {
+    font-size: .5em;
+>>>>>>> style-feature
 }
 
 label {
@@ -267,7 +278,10 @@ label {
   .wrapper {
       display: flex;
       width: 70%;
+  }
 
+  input {
+      font-size: .5em;
   }
 
 }
