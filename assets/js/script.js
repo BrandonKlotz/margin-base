@@ -163,7 +163,11 @@ $('#cart-icon').on('click', function() { //
 			cartSubtotal += itemPrice;
 		});
 
-		let cartTax = cartSubtotal * 0.06;
+		function round(tax, decimals) {
+  			return Number(Math.round(tax+'e'+decimals)+'e-'+decimals);
+		}
+
+		let cartTax = round(cartSubtotal * 0.06, 2);
 		let cartTotal = cartSubtotal + cartTax;
 		$('div.subTotal').text(cartSubtotal);
 		$('div.taxTotal').text(cartTax);
