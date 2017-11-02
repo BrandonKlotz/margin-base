@@ -45,6 +45,7 @@
 	  		$('div.item').on('click', function(){
 
 				// temp code here while I figure this out
+				shoppingCart.push($(this));
 				$(this).addClass('addedToCart');
 				let newItem = this.id;
 				console.log(newItem);
@@ -124,40 +125,65 @@
 
  // Brandon's Hooking up buttons
 
-$('#cart-icon').on('click', function() {
-	$('.menu').css('display', 'none');
-	$('.cart').css('display', 'flex');
-});
-
-$('#purchase').on('click', function() {
-	$('.cart').css('display', 'none');
-	$('.checkout').css('display', 'flex');
-});
-
-$('#cash').on('click', function() {
-	$('.checkout').css('display', 'flex');
-	$('.cash').css('display', 'flex');
-});
-
-$('#credit').on('click', function() {
-	$('.checkout').css('display', 'flex');
-	$('.credit').css('display', 'flex');
-});
-
-$('#process').on('click', function() {
-	$('.checkout').css('display', 'none');
-	$('.reciept').css('display', 'flex');
-});
-
-$('#done').on('click', function() {
+$('#logo').on('click', function() {
 	$('.reciept').css('display', 'none');
+	$('.payment').css('display', 'none');
 	$('.menu').css('display', 'flex');
 
 	if ($('div.item').hasClass('addedToCart')) {
 		$('div.item').removeClass('addedToCart');
 		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 	}
-	
+
+});
+
+$('#cart-icon').on('click', function() {
+
+	$('.menu').css('display', 'none');
+	$('.spacer').css('display', 'none');
+	$('.payment').css('display', 'none');
+	$('.cart').css('display', 'flex');
+
+	if ($('div.item').hasClass('addedToCart')) {
+
+	$('.cartItems').append(shoppingCart);
+
+}
+});
+
+$('#purchase').on('click', function() {
+	$('.menu').css('display', 'none');
+	$('.spacer').css('display', 'none');
+	$('.cart').css('display', 'none');
+	$('.payment').css('display', 'flex');
+});
+
+$('#cash').on('click', function() {
+	$('.spacer').css('display', 'none');
+	$('.payment').css('display', 'flex');
+	$('.cash').css('display', 'flex');
+});
+
+$('#credit').on('click', function() {
+	$('.payment').css('display', 'flex');
+	$('.credit').css('display', 'flex');
+});
+
+$('#process').on('click', function() {
+	$('.payment').css('display', 'none');
+	$('.reciept').css('display', 'flex');
+});
+
+$('#done').on('click', function() {
+	$('.reciept').css('display', 'none');
+	$('.payment').css('display', 'none');
+	$('.menu').css('display', 'flex');
+
+	if ($('div.item').hasClass('addedToCart')) {
+		$('div.item').removeClass('addedToCart');
+		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
+	}
+
 });
 
 
