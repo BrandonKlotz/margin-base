@@ -18,28 +18,38 @@ $(function() {
 	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 1, category: "accessories"}
 	];	
 
-function listItems() {
-	let wrapper = $('.wrapper');
-	let currentCategory = "";
-    items.forEach(function(item) {   
-    	if( item.category === currentCategory){
-   			console.log(item.category);
-    	}
-    	else {
-    		let category = '<div class="categoryHead">' + item.category.toUpperCase() + '</div>';
-    		wrapper.append(category);
-    		currentCategory = item.category;
-    	}
-    
-    	let menuItem = '<div class="item">' + item.name + '</div>';
-    	wrapper.append(menuItem);
+	const shoppingCart = [];
 
-    	// track currentCategory to determine whether to add a category div
-    });
-  }
+	// insert items into index.html
+	function listItems() {
+		let $wrapper = $('.wrapper');
+		let currentCategory = "";
+	    items.forEach(function(item) {   
+	    	// insert category div if necessary
+	    	if( item.category !== currentCategory){
+	    		let $category = '<div class="categoryHead">' + item.category.toUpperCase() + '</div>';
+	    		$wrapper.append($category);
+	    		currentCategory = item.category;
+	    	}
+	    	let $menuItem = '<div class="item">' + item.name + '&nbsp;<button class="addToCart" type="button"> + </button></div>';
+	    	$wrapper.append($menuItem);
+	    });
+	    addButtons();
+	  }
 
-$(listItems);
+	  function addButtons() {
+	  		$('button.addToCart').on('click', function(){
+				console.log("clicked it!");
+				$(this).addClass('selected');
+				// where this refers to the button, not the item
+				// how do we push the item data to the shoppingCart array?
 
+				//let selectedItem = $(this).item.name;
+			});
+	  }
+
+
+	$(listItems);
 
 });
 // end of wrapping function!!
