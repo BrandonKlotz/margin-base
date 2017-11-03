@@ -107,6 +107,12 @@
 		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'none');
 
+		cartSubtotal = 0;
+		cartTax = 0;
+		cartTotal = 0;
+
+		$('.cartItems').empty();
+
 		// Add cartItem array to cartItems Div
 		if ($('div.item').hasClass('addedToCart')) {
 			shoppingCart.forEach(function(cart){
