@@ -118,6 +118,7 @@
 				$('.cartItems').append(cartItem);
 				let itemPrice = cart.price;
 				cartSubtotal += itemPrice;
+				round(cartSubtotal, 2);
 			});
 
 			// Calculate cart totals
