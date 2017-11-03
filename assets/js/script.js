@@ -1,6 +1,6 @@
+(function() {
 
- (function() {
-
+	// Our database of shop items
 	const items = [
 
 	// Category 1
@@ -28,27 +28,33 @@
 
 	// Insert items into menu
 	function listItems() {
+
 		let wrapper = $('.wrapper.menu');
 		let currentCategory = "";
+
+			// For each item
 	    items.forEach(function(item) {
+
 	    	// Insert category div if necessary
 	    	if( item.category !== currentCategory){
 	    		let category = '<div class="categoryHead">' + item.category.toUpperCase() + '</div>';
 	    		wrapper.append(category);
 	    		currentCategory = item.category;
 	    	}
+
 	    	// Insert each item div
 	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'</span></div>';
 	    	wrapper.append(menuItem);
 	    });
+
 	    // Call addClick to set event handler on item buttons just created
 	    selectItems();
 	}
 
 	// Add selected item to shopping cart
 	function selectItems() {
-  		$('div.item').on('click', function(){
 
+  		$('div.item').on('click', function(){
 			$(this).addClass('addedToCart');
 
 			// this.id returns a string. parseInt() converts it to a number
@@ -83,11 +89,11 @@
 		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'none');
 
+		// Changes CartEmpty icon to CartActive icon if shoppingCart array is empty or active
 		if ($('div.item').hasClass('addedToCart')) {
 			$('div.item').removeClass('addedToCart');
 			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 		};
-		$('.cartItems').empty();
 	});
 
 	// On cart icon click
