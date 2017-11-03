@@ -218,13 +218,11 @@ $('#process').on('click', function() {
 	$('.reciept').css('display', 'flex');
 });
 
-$('#done').on('click', function() {
-	$('.menu').css('display', 'flex');
-	$('.cart').css('display', 'none');
-	$('.payment').css('display', 'none');
-	$('.credit').css('display', 'none');
-	$('.cash').css('display', 'none');
+$('#emailBtn').on('click', function() {
 	$('.reciept').css('display', 'none');
+	$('.payment').css('display', 'none');
+	$('.menu').css('display', 'flex');
+	$('.credit').css('display', 'none');
 
 	if ($('div.item').hasClass('addedToCart')) {
 		$('div.item').removeClass('addedToCart');
