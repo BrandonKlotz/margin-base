@@ -190,9 +190,14 @@
 		$('.cash').css('display', 'none');
 	});
 
-	$('#process').on('click', function() {
+
+	$('button#process').on('click', function() {
 		$('.payment').css('display', 'none');
 		$('.reciept').css('display', 'flex');
+		let cashRcvd = parseInt($('#cashTender').val());
+		let change = cashRcvd - cartTotal;
+		$('#change').val(change);
+
 	});
 
 	$('#done').on('click', function() {
