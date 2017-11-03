@@ -89,11 +89,9 @@
 		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'none');
 
-		// Changes CartEmpty icon to CartActive icon if shoppingCart array is empty or active
-		if ($('div.item').hasClass('addedToCart')) {
-			$('div.item').removeClass('addedToCart');
-			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
-		};
+		// Empty the html from cart
+		$('.cartItems').empty();
+
 	});
 
 	// On cart icon click
@@ -107,11 +105,11 @@
 		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'none');
 
+
+		// Reset cart item totals
 		cartSubtotal = 0;
 		cartTax = 0;
 		cartTotal = 0;
-
-		$('.cartItems').empty();
 
 		// Add cartItem array to cartItems Div
 		if ($('div.item').hasClass('addedToCart')) {
