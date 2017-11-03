@@ -74,7 +74,7 @@
 				//console.log(selectedItem);
 
 			});
-	  }
+		}
 
 
 	$(listItems);
@@ -230,13 +230,14 @@ $('#process-cash').on('click', function() {
 
 $('#emailBtn').on('click', function() {
 	$('.cartItems').empty();
-	
+
 	console.clear();
 
 	$('.reciept').css('display', 'none');
 	$('.payment').css('display', 'none');
 	$('.menu').css('display', 'flex');
 	$('.credit').css('display', 'none');
+	$('.cartItems').empty();
 
 	if ($('div.item').hasClass('addedToCart')) {
 		$('div.item').removeClass('addedToCart');
