@@ -1,5 +1,5 @@
 
-// (function() {
+ (function() {
 
 	const items = [
 
@@ -155,12 +155,12 @@
 				cartSubtotal += itemPrice;
 			});
 
-			function round(tax, decimals) {
-	  			return Number(Math.round(tax+'e'+decimals)+'e-'+decimals);
+			function round(value, decimals) {
+	  			return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 			}
 
-			let cartTax = round(cartSubtotal * 0.06, 2);
-			let cartTotal = cartSubtotal + cartTax;
+			let cartTax = round(cartSubtotal * 0.06,2);
+			let cartTotal = round(cartSubtotal + cartTax, 2);
 			$('div.subTotal').text(cartSubtotal);
 			$('div.taxTotal').text(cartTax);
 			$('div#grandAmount').text(cartTotal);
@@ -204,5 +204,5 @@
 			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 		}
 	});
-// });
+}) ();
 // end of wrapping function!!
