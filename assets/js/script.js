@@ -123,19 +123,13 @@
 
 
 
-$('#logo').on('click', function() {
-	$('.menu').css('display', 'flex');
-	$('.cart').css('display', 'none');
-	$('.payment').css('display', 'none');
-	$('.credit').css('display', 'none');
-	$('.cash').css('display', 'none');
-	$('.reciept').css('display', 'none');
-
 	$('#logo').on('click', function() {
-		$('.reciept').css('display', 'none');
-		$('.payment').css('display', 'none');
 		$('.menu').css('display', 'flex');
-		$('.spacer').css('display', 'block');
+		$('.cart').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'none');
 
 		if ($('div.item').hasClass('addedToCart')) {
 			$('div.item').removeClass('addedToCart');
@@ -143,20 +137,16 @@ $('#logo').on('click', function() {
 		};
 
 		$('.cartItems').empty();
-
 	});
 
-	$('.menu').css('display', 'none');
-	$('.cart').css('display', 'flex');
-	$('.payment').css('display', 'none');
-	$('.credit').css('display', 'none');
-	$('.cash').css('display', 'none');
-	$('.reciept').css('display', 'none');
 
+	$('#cart-icon').on('click', function() {
 		$('.menu').css('display', 'none');
-		$('.spacer').css('display', 'none');
-		$('.payment').css('display', 'none');
 		$('.cart').css('display', 'flex');
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'none');
 
 		if ($('div.item').hasClass('addedToCart')) {
 			// displaying cart items
@@ -181,33 +171,38 @@ $('#logo').on('click', function() {
 
 	$('#purchase').on('click', function() {
 		$('.menu').css('display', 'none');
-		$('.spacer').css('display', 'none');
 		$('.cart').css('display', 'none');
 		$('.payment').css('display', 'flex');
 	});
 
-	$('#cash').on('click', function() {
-		$('.spacer').css('display', 'none');
-		$('.payment').css('display', 'flex');
-		$('.credit').css('display', 'none');
-		$('.cash').css('display', 'flex');
-	});
-
 	$('#credit').on('click', function() {
-		$('.spacer').css('display', 'none');
 		$('.payment').css('display', 'flex');
 		$('.credit').css('display', 'flex');
 		$('.cash').css('display', 'none');
 	});
 
+	$('#cash').on('click', function() {
+		$('.payment').css('display', 'flex');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'flex');
 
-	$('button#process').on('click', function() {
-		$('.payment').css('display', 'none');
-		$('.reciept').css('display', 'flex');
 		let cashRcvd = parseInt($('#cashTender').val());
 		let change = round(cashRcvd - cartTotal, 2);
 		$('#change').val(change);
+	});
 
+	$('#process-cash').on('click', function() {
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'flex');
+	});
+
+	$('#process-credit').on('click', function() {
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'flex');
 	});
 
 	$('#done').on('click', function() {
@@ -220,5 +215,5 @@ $('#logo').on('click', function() {
 			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 		}
 	});
-}) ();
+})();
 // end of wrapping function!!
