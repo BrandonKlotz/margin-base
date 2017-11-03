@@ -21,6 +21,9 @@
 
 	// shopping cart array
 	const shoppingCart = [];
+	let cartSubtotal = 0;
+	let cartTax = 0;
+	let cartTotal = 0;
 
 	// insert items into index.html
 	function listItems() {
@@ -147,7 +150,6 @@
 
 		if ($('div.item').hasClass('addedToCart')) {
 			// displaying cart items
-			let cartSubtotal = 0;
 			shoppingCart.forEach(function(cart){
 				let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
 				$('.cartItems').append(cartItem);
@@ -155,18 +157,17 @@
 				cartSubtotal += itemPrice;
 			});
 
-			function round(value, decimals) {
-	  			return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-			}
-
-			let cartTax = round(cartSubtotal * 0.06,2);
-			let cartTotal = round(cartSubtotal + cartTax, 2);
+			cartTax = round(cartSubtotal * 0.06, 2);
+			cartTotal = round(cartSubtotal + cartTax, 2);
 			$('div.subTotal').text(cartSubtotal);
 			$('div.taxTotal').text(cartTax);
 			$('div#grandAmount').text(cartTotal);
 		};
-
 	});
+
+	function round(value, decimals) {
+		return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+	}
 
 	$('#purchase').on('click', function() {
 		$('.menu').css('display', 'none');
