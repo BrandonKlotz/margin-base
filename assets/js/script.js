@@ -3,20 +3,20 @@
 
 	const items = [
 
-	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 10.00, category: "smokeables"},
-	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 12.00, category: "smokeables"},
-	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 18.00, category: "smokeables"},
-	{ id: 13, name: "Maui Wowie", description: "island weed", price: 8.00, category: "smokeables"},
-	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 9.00, category: "smokeables"},
-	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 10.00, category: "smokeables"},
+	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 10.01, category: "smokeables"},
+	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 10.01, category: "smokeables"},
+	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 10.01, category: "smokeables"},
+	{ id: 13, name: "Maui Wowie", description: "island weed", price: 10.01, category: "smokeables"},
+	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 10.01, category: "smokeables"},
+	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 10.01, category: "smokeables"},
 
-	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 9.00, category: "edibles"},
-	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 15.00, category: "edibles"},
-	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 15.00, category: "edibles"},
-	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.00, category: "edibles"},
+	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 10.01, category: "edibles"},
+	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 10.01, category: "edibles"},
+	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 10.01, category: "edibles"},
+	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.01, category: "edibles"},
 
-	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 25.00, category: "accessories"},
-	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 25.00, category: "accessories"}
+	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 10.01, category: "accessories"},
+	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.01, category: "accessories"}
 	];
 
 	// shopping cart array
@@ -70,81 +70,37 @@
   	// add items to index.html
   	$(listItems);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	// On logo icon click
 	$('#logo').on('click', function() {
-		$('.reciept').css('display', 'none');
-		$('.payment').css('display', 'none');
+
+		// Show Menu - Hide all other modals
 		$('.menu').css('display', 'flex');
-		$('.spacer').css('display', 'block');
+		$('.cart').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'none');
 
 		if ($('div.item').hasClass('addedToCart')) {
 			$('div.item').removeClass('addedToCart');
 			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 		};
-
 		$('.cartItems').empty();
-
 	});
 
-	// populate & calculate shopping cart
+	// On cart icon click
 	$('#cart-icon').on('click', function() {
 
+		// Show Cart - Hide all other modals
 		$('.menu').css('display', 'none');
-		$('.reciept').css('display', 'none');
-		$('.payment').css('display', 'none');
 		$('.cart').css('display', 'flex');
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'none');
 
+		// Add cartItem array to cartItems Div
 		if ($('div.item').hasClass('addedToCart')) {
-			// displaying cart items
 			shoppingCart.forEach(function(cart){
 				let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
 				$('.cartItems').append(cartItem);
@@ -152,6 +108,7 @@
 				cartSubtotal += itemPrice;
 			});
 
+			// Calculate cart totals
 			cartTax = round(cartSubtotal * 0.06, 2);
 			cartTotal = round(cartSubtotal + cartTax, 2);
 			$('div.subTotal').text(cartSubtotal);
@@ -160,57 +117,79 @@
 		};
 	});
 
+	// Round integers
 	function round(value, decimals) {
 		return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 	}
 
+	// On purchase button click
 	$('#purchase').on('click', function() {
+
+		// Show payment options - Hide all other modals
 		$('.menu').css('display', 'none');
 		$('.cart').css('display', 'none');
 		$('.payment').css('display', 'flex');
-	});
-
-	$('#credit').on('click', function() {
-		$('.payment').css('display', 'flex');
-		$('.credit').css('display', 'flex');
+		$('.credit').css('display', 'none');
 		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'none');
 	});
 
 	$('#cash').on('click', function() {
+		$('.menu').css('display', 'none');
+		$('.cart').css('display', 'none');
 		$('.payment').css('display', 'flex');
 		$('.credit').css('display', 'none');
 		$('.cash').css('display', 'flex');
-
+		$('.reciept').css('display', 'none');
 	});
 
-	$('#process-cash').on('click', function() {
-		$('.payment').css('display', 'none');
-		$('.credit').css('display', 'none');
+	$('#credit').on('click', function() {
+		$('.menu').css('display', 'none');
+		$('.cart').css('display', 'none');
+		$('.payment').css('display', 'flex');
+		$('.credit').css('display', 'flex');
 		$('.cash').css('display', 'none');
-		$('.reciept').css('display', 'flex');
-
-
-							let cashRcvd = parseInt($('#cashTender').val());
-							let change = round(cashRcvd - cartTotal, 2);
-							$('#change').val(change);
+		$('.reciept').css('display', 'none');
 	});
 
 	$('#process-credit').on('click', function() {
+		$('.menu').css('display', 'none');
+		$('.cart').css('display', 'none');
 		$('.payment').css('display', 'none');
 		$('.credit').css('display', 'none');
 		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'flex');
 	});
 
-	$('#emailBtn').on('click', function() {
-		$('.reciept').css('display', 'none');
+
+	$('button#process-cash').on('click', function() {
+		$('.menu').css('display', 'none');
+		$('.cart').css('display', 'none');
 		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'flex');
+		$('.reciept').css('display', 'flex');
+
+		let cashRcvd = parseInt($('#cashTender').val());
+		let change = round(cashRcvd - cartTotal, 2);
+		$('#change').val(change);
+
+	});
+
+	$('#emailBtn').on('click', function() {
 		$('.menu').css('display', 'flex');
+		$('.cart').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'none');
+		$('.reciept').css('display', 'none');
 
 		if ($('div.item').hasClass('addedToCart')) {
 			$('div.item').removeClass('addedToCart');
 			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 		}
+
+		location.reload();
 	});
-})();
+}) ();
 // end of wrapping function!!
