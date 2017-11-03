@@ -4,20 +4,20 @@
 	const items = [
 
 	// Category 1
-	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 8.01, category: "smokeables"},
-	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 10.01, category: "smokeables"},
-	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 12.01, category: "smokeables"},
-	{ id: 13, name: "Maui Wowie", description: "island weed", price: 9.51, category: "smokeables"},
-	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 13.01, category: "smokeables"},
-	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 7.51, category: "smokeables"},
+	{ id: 10, name: "I-beam", description: "Structural steel", price: 91.95, category: "Metals"},
+	{ id: 11, name: "Column", description: "Support up to 14,600 lb.", price: 147.95, category: "Metals"},
+	{ id: 12, name: "Rebar", description: "Grade 40 unfinished steel construction", price: 5.25, category: "Metals"},
+	{ id: 13, name: "Wire Rope", description: "Galvanized uncoated", price: 16.90, category: "Metals"},
+	{ id: 14, name: "Strut Channels", description: "Galvanized slotted", price: 18.94, category: "Metals"},
+	{ id: 15, name: "Metal Trusses", description: "8' Steel", price: 89.44, category: "Metals"},
 	// Category 2
-	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 11.01, category: "edibles"},
-	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 8.51, category: "edibles"},
-	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 10.01, category: "edibles"},
-	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.51, category: "edibles"},
+	{ id: 50, name: "Brick", description: "Terra Cotta", price: 6.45, category: "Masonry"},
+	{ id: 51, name: "Cinder Block", description: "Standard size", price: 1.55, category: "Masonry"},
+	{ id: 52, name: "Noxer Block", description: "5-7 mm thick coating", price: 55.99, category: "Masonry"},
+	{ id: 53, name: "Urbanite", description: "Broken-up concrete", price: 5.51, category: "Masonry"},
 	// Category 3
-	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 20.01, category: "accessories"},
-	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 25.01, category: "accessories"}
+	{ id: 70, name: "Circut Breaker", description: "100-amp", price: 88.45, category: "Electric Systems"},
+	{ id: 71, name: "Electrical Connector", description: "Amphenol", price: 13.24, category: "Electric Systems"}
 	];
 
 	// Items that are selected in menu are pushed to shoppingCart array

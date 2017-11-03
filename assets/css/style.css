@@ -22,6 +22,11 @@ button , #process-cash, #process-credit, #purchase {
   padding: .5em 1.5em .5em 1.5em;
 }
 
+div.item {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-family: 'Saira Semi Condensed', sans-serif;
   font-size: 3em;
@@ -60,7 +65,7 @@ p {
 }
 
 .addedToCart {
-  background-color: #eee;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -107,6 +112,11 @@ p {
   margin-bottom: 0;
 }
 
+.description {
+  font-style: italic;
+  font-size: .75em;
+}
+
 .flexPayment {
   display: flex;
   justify-content: center;
@@ -130,6 +140,10 @@ p {
   flex-direction: column;
 }
 
+.item {
+  color: #6CBC61;
+}
+
 .item, .sectionHeader {
   border-bottom-color: #eee;
   border-bottom-style: solid;
@@ -150,6 +164,10 @@ p {
 .mainContain, .navContain {
   display: flex;
   justify-content: center;
+}
+
+.price {
+  font-weight: bold;
 }
 
 .spacer {
@@ -230,6 +248,13 @@ p {
 }
 
 @media only screen and (min-width: 480px) {
+
+  div.item {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 
   input {
     font-size: 1em;
