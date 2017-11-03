@@ -35,6 +35,7 @@ subtotal, grand total, and anything else of interest.
 
 ## Discovery 
 
+![Discovery](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/LeafAnatomy.jpg)
 ![Discovery](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/discovery1.jpg)
 ![Discovery](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/discovery2.jpg)
 
