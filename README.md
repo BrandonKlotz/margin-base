@@ -33,20 +33,29 @@ subtotal, grand total, and anything else of interest.
 - Ability to remove single items from cart
 - Menu formatting
 
+## Discovery 
+
+![Discovery](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/discovery1.jpg)
+![Discovery](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/discovery2.jpg)
+
+## Our first big success
+
+![Array](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/array.png)
+
 ## Desktop Wireframe
 These were the visual aids we used as a goal.
 
-Menu
+### Menu
 ![menu](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Menu.png)
 
-Shopping Cart
+### Shopping Cart
 ![cart](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/ShoppingCart.png)
 
-Payment - Card
+### Payment - Card
 ![payment card](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Payment-Card.png)
 
-Payment - Cash
+### Payment - Cash
 ![payment cash](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Payment-Cash.png)
 
-Reciept
+### Reciept
 ![reciept](https://raw.githubusercontent.com/BrandonKlotz/pos-lab/master/assets/img/Reciept.png)
