@@ -174,7 +174,7 @@ nav {
     font-weight: bold;
 }
 
-button , #purchase, #process {
+button , #purchase, #process-credit, #process-cash {
     background-color: #6CBC61;
     color: white;
     padding: .5em 1.5em .5em 1.5em;
@@ -275,7 +275,9 @@ label {
   }
 
   input {
-      font-size: .5em;
+      font-size: 1em;
+      padding: 1em;
+      margin: .2em;
   }
 
 }
