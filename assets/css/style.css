@@ -81,10 +81,6 @@ p {
   font-size: 1.5em;
 }
 
-.cash, .cart, .credit, .payment, .process, .reciept {
-  display: none;
-}
-
 .categoryHead {
   align-items: center;
   background-color: #5790DC;
@@ -274,4 +270,9 @@ p {
     display: flex;
     width: 70%;
   }
+}
+
+/* Must be at end */
+.cash, .cart, .credit, .payment, .process, .reciept {
+  display: none;
 }
