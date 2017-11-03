@@ -64,9 +64,9 @@ p {
   font-weight: 400;
 }
 
-.addedToCart {
+.item.addedToCart {
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 2px solid #6CBC61;
   border-radius: 4px;
 }
 
@@ -97,14 +97,6 @@ p {
   padding-bottom: 10px;
   padding-top: 10px;
   width: 100%;
-}
-
-.cartItem {
-  display: flex;
-  font-size: 1em;
-  margin: .5em 2em .5em 4em;
-  padding: 1em;
-  text-align: left;
 }
 
 .credit {
@@ -194,6 +186,7 @@ p {
   flex-direction: column;
   justify-content: center;
   width: 468px;
+  margin-bottom: 4em;
 }
 
 #cart {
@@ -248,7 +241,7 @@ p {
 }
 
 @media only screen and (min-width: 480px) {
-
+  
   div.item {
     display: flex;
     flex-direction: row;
