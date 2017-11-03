@@ -4,20 +4,20 @@
 	const items = [
 
 	// Category 1
-	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 10.01, category: "smokeables"},
+	{ id: 10, name: "Alaskan Thunder", description: "dank weed", price: 8.01, category: "smokeables"},
 	{ id: 11, name: "Purple Haze", description: "skunk weed", price: 10.01, category: "smokeables"},
-	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 10.01, category: "smokeables"},
-	{ id: 13, name: "Maui Wowie", description: "island weed", price: 10.01, category: "smokeables"},
-	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 10.01, category: "smokeables"},
-	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 10.01, category: "smokeables"},
+	{ id: 12, name: "Pineapple Express", description: "not-so-dank weed", price: 12.01, category: "smokeables"},
+	{ id: 13, name: "Maui Wowie", description: "island weed", price: 9.51, category: "smokeables"},
+	{ id: 14, name: "Kingdom of Kush", description: "sweet weed", price: 13.01, category: "smokeables"},
+	{ id: 15, name: "After School Special", description: "not-so-skunky weed", price: 7.51, category: "smokeables"},
 	// Category 2
-	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 10.01, category: "edibles"},
-	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 10.01, category: "edibles"},
+	{ id: 50, name: "Ganja Gummies", description: "marijuana-infused gummy candy", price: 11.01, category: "edibles"},
+	{ id: 51, name: "Medicinal Brownies", description: "weed-laced brownies", price: 8.51, category: "edibles"},
 	{ id: 52, name: "Green Elixir", description: "bright green grass drink for sipping", price: 10.01, category: "edibles"},
-	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.01, category: "edibles"},
+	{ id: 53, name: "No-Bake Cookies", description: "get baked with our no-bakes", price: 10.51, category: "edibles"},
 	// Category 3
-	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 10.01, category: "accessories"},
-	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 10.01, category: "accessories"}
+	{ id: 70, name: "Rainbow Bowl", description: "smoke-a-bowl", price: 20.01, category: "accessories"},
+	{ id: 71, name: "Grinder not grindr", description: "grind it up", price: 25.01, category: "accessories"}
 	];
 
 	// Items that are selected in menu are pushed to shoppingCart array
@@ -218,6 +218,13 @@
 
 		// Reloads webpage to clear all arrays
 		location.reload();
+	});
+
+	$('#empty-cart').on('click', function() {
+
+		// Reloads webpage to clear all arrays
+		location.reload();
+
 	});
 }) ();
 // End of wrapping function!!
