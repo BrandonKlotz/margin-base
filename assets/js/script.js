@@ -73,8 +73,8 @@
 				//let selectedItem = $(this).id;
 				//console.log(selectedItem);
 
-			});
-	  }
+			}); 
+		}
 
 
 	$(listItems);
@@ -223,12 +223,14 @@ $('#emailBtn').on('click', function() {
 	$('.payment').css('display', 'none');
 	$('.menu').css('display', 'flex');
 	$('.credit').css('display', 'none');
-
+	$('.cartItems').empty();
+	
 	if ($('div.item').hasClass('addedToCart')) {
 		$('div.item').removeClass('addedToCart');
 		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
+			
 	}
-
+	
 });
 
 
