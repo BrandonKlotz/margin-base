@@ -6,111 +6,112 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
-	<nav class="navContain">
-		<div id="logo"><img src="assets/img/logo.svg" /></div>
-		<div><img id="cart-icon" src="assets/img/CartEmpty.svg" /></div>
-	</nav>
 
-	<div class="spacer"></div>
+	<body>
 
-		<div class="mainContain">
-			<div class="wrapper menu">
+		<nav class="navContain">
+			<div id="logo"><img src="assets/img/logo.svg" /></div>
+			<div><img id="cart-icon" src="assets/img/CartEmpty.svg" /></div>
+		</nav>
 
-
-			</div>
-		</div>
+		<div class="spacer"></div>
 
 			<div class="mainContain">
-				<div class="wrapper cart">
-					<div class="categoryHead">Cart Summary</div>
-					<div class="sectionHeader">Items</div>
-					<div class="cartItems"></div>
-						<div id="border"></div>
-					<div class="flexTotals">
-						<div class="border"></div>
-						<div class="subTxt">Subtotal</div>
-						<div class="subTotal"> $0.00</div>
-					</div>
-					<div class="flexTotals">
-						<div class="taxTxt">Tax</div>
-						<div class="taxTotal"> $0.00</div>
-					</div>
-					<div class="flexTotals">
-							<div class="grandTxt">GRAND TOTAL</div>
-							<div id="grandAmount"> $0.00</div>
-					</div>
-						<div class="border"></div>
-						<button id="purchase">PURCHASE</button>
+				<div class="wrapper menu">
 				</div>
 			</div>
 
-			<div class="mainContain">
-				<div class="wrapper payment">
-					<div class="categoryHead">Payment Details</div>
-					<div class="sectionHeader">Method of Payment</div>
-					<div class="flexPayment">
-						<button id= "cash">CASH</button>
-						<button id="credit">CREDIT</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="mainContain">
-				<div class="wrapper credit">
-					<div class="categoryHead">Credit Card</div>
-					<div class="paymentCredit">
-						<div class="inputDetails sectionHeader">
-							<label id="cardHolder">Name:<input type="text" placeholder="John Smith" ></label>
-							<label id="creditCardNumber">Credit Card:<input type="text" placeholder="0000 0000 0000 0000" ></label>
-							<label id="cardExpire">Exp Date:<input type="text" placeholder="07/21" ></label>
-							<label id="cvv">CVV:<input type="text" placeholder="000" ></label>
+				<div class="mainContain">
+					<div class="wrapper cart">
+						<div class="categoryHead">Cart Summary</div>
+						<div class="sectionHeader">Items</div>
+						<div class="cartItems"></div>
+							<div id="border"></div>
+						<div class="flexTotals">
 							<div class="border"></div>
-							<button id="process-credit">PROCESS</button>
+							<div class="subTxt">Subtotal</div>
+							<div class="subTotal"> $0.00</div>
+						</div>
+						<div class="flexTotals">
+							<div class="taxTxt">Tax</div>
+							<div class="taxTotal"> $0.00</div>
+						</div>
+						<div class="flexTotals">
+								<div class="grandTxt">GRAND TOTAL</div>
+								<div id="grandAmount"> $0.00</div>
+						</div>
+							<div class="border"></div>
+							<button id="purchase">PURCHASE</button>
+					</div>
+				</div>
+
+				<div class="mainContain">
+					<div class="wrapper payment">
+						<div class="categoryHead">Payment Details</div>
+						<div class="sectionHeader">Method of Payment</div>
+						<div class="flexPayment">
+							<button id= "cash">CASH</button>
+							<button id="credit">CREDIT</button>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="mainContain">
-				<div class="wrapper cash">
-				<div class="categoryHead">Cash</div>
-					<div class="paymentCash">
-						<div class="inputDetails sectionHeader">
-							<label>Tender<input id="cashTender" type="text"></label>
-							<div class="border"></div>
-							<label>Change <input id="change"></input></label>
-							<button id="process-cash">PROCESS</button>
+				<div class="mainContain">
+					<div class="wrapper credit">
+						<div class="categoryHead">Credit Card</div>
+						<div class="paymentCredit">
+							<div class="inputDetails sectionHeader">
+								<label id="cardHolder">Name:<input type="text" placeholder="John Smith" ></label>
+								<label id="creditCardNumber">Credit Card:<input type="text" placeholder="0000 0000 0000 0000" ></label>
+								<label id="cardExpire">Exp Date:<input type="text" placeholder="07/21" ></label>
+								<label id="cvv">CVV:<input type="text" placeholder="000" ></label>
+								<div class="border"></div>
+								<button id="process-credit">PROCESS</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="mainContain">
-				<div class="wrapper reciept">
-					<div class="categoryHead">Receipt</div>
-					<div class="sectionHeader">Invoice Number: 23</div>
-					<div class="cartItems"></div>
-						<div id="border"></div>
-					<div class="flexTotals">
-						<div class="border"></div>
-						<div class="subTxt">Subtotal</div>
-						<div class="subTotal"> $0.00</div>
-					</div>
-					<div class="flexTotals">
-						<div class="taxTxt">Tax</div>
-						<div class="taxTotal"> $0.00</div>
-					</div>
-					<div class="flexTotals">
-							<div class="grandTxt">GRAND TOTAL</div>
-							<div id="grandAmount"> $0.00</div>
-					</div>
-						<div class="border"></div>
-						<button id="emailBtn">EMAIL</button>
+				<div class="mainContain">
+					<div class="wrapper cash">
+					<div class="categoryHead">Cash</div>
+						<div class="paymentCash">
+							<div class="inputDetails sectionHeader">
+								<label>Tender<input id="cashTender" type="text"></label>
+								<div class="border"></div>
+								<label>Change <input id="change"></input></label>
+								<button id="process-cash">PROCESS</button>
+							</div>
+						</div>
 					</div>
 				</div>
 
-	<script src="assets/js/jquery-3.2.1.js"></script>
-	<script src="assets/js/script.js"></script>
-</body>
+				<div class="mainContain">
+					<div class="wrapper reciept">
+						<div class="categoryHead">Receipt</div>
+						<div class="sectionHeader">Invoice Number: 23</div>
+						<div class="cartItems"></div>
+							<div id="border"></div>
+						<div class="flexTotals">
+							<div class="border"></div>
+							<div class="subTxt">Subtotal</div>
+							<div class="subTotal"> $0.00</div>
+						</div>
+						<div class="flexTotals">
+							<div class="taxTxt">Tax</div>
+							<div class="taxTotal"> $0.00</div>
+						</div>
+						<div class="flexTotals">
+								<div class="grandTxt">GRAND TOTAL</div>
+								<div id="grandAmount"> $0.00</div>
+						</div>
+							<div class="border"></div>
+							<button id="emailBtn">EMAIL</button>
+						</div>
+					</div>
+
+		<script src="assets/js/jquery-3.2.1.js"></script>
+		<script src="assets/js/script.js"></script>
+		
+	</body>
 </html>
