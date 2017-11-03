@@ -195,7 +195,7 @@
 		$('.payment').css('display', 'none');
 		$('.reciept').css('display', 'flex');
 		let cashRcvd = parseInt($('#cashTender').val());
-		let change = cashRcvd - cartTotal;
+		let change = round(cashRcvd - cartTotal, 2);
 		$('#change').val(change);
 
 	});
