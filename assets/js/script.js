@@ -216,4 +216,4 @@
 		location.reload();
 	});
 }) ();
-// end of wrapping function!!
+// End of wrapping function!!
