@@ -46,7 +46,7 @@ label {
 nav {
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 0 15px #333;
+  box-shadow: 0 0 15px #666;
   display: flex;
   height: 100px;
   justify-content: space-around;
@@ -69,7 +69,7 @@ p {
   padding: 1em 5em 1em 2em;
 }
 
-.border{
+.border {
   border-bottom-color: #ccc;
   border-bottom-style: solid;
   border-width: 1px;
@@ -95,7 +95,7 @@ p {
 }
 
 .cartItem {
-  display:flex;
+  display: flex;
   font-size: 1em;
   margin: .5em 2em .5em 4em;
   padding: 1em;
@@ -130,7 +130,7 @@ p {
   flex-direction: column;
 }
 
-.item {
+.item, .sectionHeader {
   border-bottom-color: #eee;
   border-bottom-style: solid;
   border-width: 1px;
@@ -147,29 +147,9 @@ p {
   cursor: pointer;
 }
 
-.mainContain{
-  display:flex;
+.mainContain, .navContain {
+  display: flex;
   justify-content: center;
-}
-
-.navContain {
-  display: flex;
-}
-
-.payment {
-  display: none;
-  margin-top: 0;
-}
-
-.sectionHeader {
-  border-bottom-color: #eee;
-  border-bottom-style: solid;
-  border-width: 1px;
-  display: flex;
-  font-size: 1.3em;
-  margin: .5em 2em;
-  padding: 1em;
-  text-align: left;
 }
 
 .spacer {
@@ -184,11 +164,7 @@ p {
   width: 200px;
 }
 
-.subTxt{
-  padding: 1em 3em 1em 1em;
-}
-
-.taxTxt{
+.subTxt, .taxTxt {
   padding: 1em 3em 1em 1em;
 }
 
@@ -200,11 +176,6 @@ p {
   flex-direction: column;
   justify-content: center;
   width: 468px;
-}
-
-.wrapper .payment {
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 #cart {
