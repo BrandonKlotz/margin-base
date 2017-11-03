@@ -120,16 +120,11 @@
 
 
 
-
-
-
 	$('#logo').on('click', function() {
-		$('.menu').css('display', 'flex');
-		$('.cart').css('display', 'none');
-		$('.payment').css('display', 'none');
-		$('.credit').css('display', 'none');
-		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.menu').css('display', 'flex');
+		$('.spacer').css('display', 'block');
 
 		if ($('div.item').hasClass('addedToCart')) {
 			$('div.item').removeClass('addedToCart');
@@ -137,16 +132,16 @@
 		};
 
 		$('.cartItems').empty();
+
 	});
 
-
+	// populate & calculate shopping cart
 	$('#cart-icon').on('click', function() {
+
 		$('.menu').css('display', 'none');
-		$('.cart').css('display', 'flex');
-		$('.payment').css('display', 'none');
-		$('.credit').css('display', 'none');
-		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.cart').css('display', 'flex');
 
 		if ($('div.item').hasClass('addedToCart')) {
 			// displaying cart items
@@ -186,9 +181,6 @@
 		$('.credit').css('display', 'none');
 		$('.cash').css('display', 'flex');
 
-		let cashRcvd = parseInt($('#cashTender').val());
-		let change = round(cashRcvd - cartTotal, 2);
-		$('#change').val(change);
 	});
 
 	$('#process-cash').on('click', function() {
@@ -196,6 +188,11 @@
 		$('.credit').css('display', 'none');
 		$('.cash').css('display', 'none');
 		$('.reciept').css('display', 'flex');
+
+
+							let cashRcvd = parseInt($('#cashTender').val());
+							let change = round(cashRcvd - cartTotal, 2);
+							$('#change').val(change);
 	});
 
 	$('#process-credit').on('click', function() {
@@ -205,7 +202,7 @@
 		$('.reciept').css('display', 'flex');
 	});
 
-	$('#done').on('click', function() {
+	$('#emailBtn').on('click', function() {
 		$('.reciept').css('display', 'none');
 		$('.payment').css('display', 'none');
 		$('.menu').css('display', 'flex');
