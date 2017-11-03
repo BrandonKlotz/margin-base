@@ -1,5 +1,5 @@
 
-(function() {
+// (function() {
 
 	const items = [
 
@@ -37,186 +37,172 @@
 	    	let menuItem = '<div id="' + item.id + '" class="item">' + item.name + ' &nbsp; <span class="description">' + item.description + '</span><span class="price">  &nbsp; $ ' + item.price +'</span></div>';
 	    	wrapper.append(menuItem);
 	    });
-	    // you have to call the addButtons function after they've been created!
+	    // call addClick to set event handler on item buttons just created
 	    addClick();
-	  }
+	}
 
-		function addClick() {
-	  		$('div.item').on('click', function(){
+	// add clicked item to shopping cart
+	function addClick() {
+  		$('div.item').on('click', function(){
 
-				// temp code here while I figure this out
-				//shoppingCart.push($(this));
-				$(this).addClass('addedToCart');
+			$(this).addClass('addedToCart');
 
-				// this.id returns a string, convert it to a number
-				let newItem = parseInt(this.id);
+			// this.id returns a string, convert it to a number
+			let newItem = parseInt(this.id);
 
-				console.log(newItem);
-
-				let purchasedItem = items.find(function(item){
-  					return item.id === newItem;
-				});
-
-				//console.log(purchasedItem);
-
- 				shoppingCart.push(purchasedItem);
- 				console.log(shoppingCart);
-
-				// Changes CartEmpty to CartActive
-				if ($('div.item').hasClass('addedToCart')) {
-					$('#cart-icon').attr('src', 'assets/img/CartActive.svg');
-				} else {
-					$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
-				}
-
-				// how do we push the item data to the shoppingCart array?
-				//let selectedItem = $(this).id;
-				//console.log(selectedItem);
-
+			let purchasedItem = items.find(function(item){
+					return item.id === newItem;
 			});
-	  }
 
+			shoppingCart.push(purchasedItem);
 
-	$(listItems);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // Brandon's Hooking up buttons
-
-$('#logo').on('click', function() {
-	$('.reciept').css('display', 'none');
-	$('.payment').css('display', 'none');
-	$('.menu').css('display', 'flex');
-	$('.spacer').css('display', 'block');
-
-	if ($('div.item').hasClass('addedToCart')) {
-		$('div.item').removeClass('addedToCart');
-		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
-	}
-
-	$('.cartItems').empty();
-
-});
-
-$('#cart-icon').on('click', function() { //
-
-	$('.menu').css('display', 'none');
-	$('.spacer').css('display', 'none');
-	$('.payment').css('display', 'none');
-	$('.cart').css('display', 'flex');
-
-	if ($('div.item').hasClass('addedToCart')) {
-		// displaying cart items
-		let cartSubtotal = 0;
-		shoppingCart.forEach(function(cart){
-			let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
-			$('.cartItems').append(cartItem);
-			let itemPrice = cart.price;
-			cartSubtotal += itemPrice;
+			// Changes CartEmpty to CartActive
+			if ($('div.item').hasClass('addedToCart')) {
+				$('#cart-icon').attr('src', 'assets/img/CartActive.svg');
+			} else {
+				$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
+			}
 		});
+  	}
+  	// add items to index.html
+  	$(listItems);
 
-		function round(tax, decimals) {
-  			return Number(Math.round(tax+'e'+decimals)+'e-'+decimals);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 // Brandon's Hooking up buttons
+
+	$('#logo').on('click', function() {
+		$('.reciept').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.menu').css('display', 'flex');
+		$('.spacer').css('display', 'block');
+
+		if ($('div.item').hasClass('addedToCart')) {
+			$('div.item').removeClass('addedToCart');
+			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
+		};
+
+		$('.cartItems').empty();
+
+	});
+
+	// populate & calculate shopping cart
+	$('#cart-icon').on('click', function() { 
+
+		$('.menu').css('display', 'none');
+		$('.spacer').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.cart').css('display', 'flex');
+
+		if ($('div.item').hasClass('addedToCart')) {
+			// displaying cart items
+			let cartSubtotal = 0;
+			shoppingCart.forEach(function(cart){
+				let cartItem = '<div class="item">' + cart.name + '&nbsp; $' + cart.price + '</div>';
+				$('.cartItems').append(cartItem);
+				let itemPrice = cart.price;
+				cartSubtotal += itemPrice;
+			});
+
+			function round(tax, decimals) {
+	  			return Number(Math.round(tax+'e'+decimals)+'e-'+decimals);
+			}
+
+			let cartTax = round(cartSubtotal * 0.06, 2);
+			let cartTotal = cartSubtotal + cartTax;
+			$('div.subTotal').text(cartSubtotal);
+			$('div.taxTotal').text(cartTax);
+			$('div#grandAmount').text(cartTotal);
+		};
+
+	});
+
+	$('#purchase').on('click', function() {
+		$('.menu').css('display', 'none');
+		$('.spacer').css('display', 'none');
+		$('.cart').css('display', 'none');
+		$('.payment').css('display', 'flex');
+	});
+
+	$('#cash').on('click', function() {
+		$('.spacer').css('display', 'none');
+		$('.payment').css('display', 'flex');
+		$('.credit').css('display', 'none');
+		$('.cash').css('display', 'flex');
+	});
+
+	$('#credit').on('click', function() {
+		$('.spacer').css('display', 'none');
+		$('.payment').css('display', 'flex');
+		$('.credit').css('display', 'flex');
+		$('.cash').css('display', 'none');
+	});
+
+	$('#process').on('click', function() {
+		$('.payment').css('display', 'none');
+		$('.reciept').css('display', 'flex');
+	});
+
+	$('#done').on('click', function() {
+		$('.reciept').css('display', 'none');
+		$('.payment').css('display', 'none');
+		$('.menu').css('display', 'flex');
+
+		if ($('div.item').hasClass('addedToCart')) {
+			$('div.item').removeClass('addedToCart');
+			$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
 		}
-
-		let cartTax = round(cartSubtotal * 0.06, 2);
-		let cartTotal = cartSubtotal + cartTax;
-		$('div.subTotal').text(cartSubtotal);
-		$('div.taxTotal').text(cartTax);
-		$('div#grandAmount').text(cartTotal);
-	}
-
-});
-
-$('#purchase').on('click', function() {
-	$('.menu').css('display', 'none');
-	$('.spacer').css('display', 'none');
-	$('.cart').css('display', 'none');
-	$('.payment').css('display', 'flex');
-});
-
-$('#cash').on('click', function() {
-	$('.spacer').css('display', 'none');
-	$('.payment').css('display', 'flex');
-	$('.credit').css('display', 'none');
-	$('.cash').css('display', 'flex');
-});
-
-$('#credit').on('click', function() {
-	$('.spacer').css('display', 'none');
-	$('.payment').css('display', 'flex');
-	$('.credit').css('display', 'flex');
-	$('.cash').css('display', 'none');
-});
-
-$('#process').on('click', function() {
-	$('.payment').css('display', 'none');
-	$('.reciept').css('display', 'flex');
-});
-
-$('#done').on('click', function() {
-	$('.reciept').css('display', 'none');
-	$('.payment').css('display', 'none');
-	$('.menu').css('display', 'flex');
-
-	if ($('div.item').hasClass('addedToCart')) {
-		$('div.item').removeClass('addedToCart');
-		$('#cart-icon').attr('src', 'assets/img/CartEmpty.svg');
-	}
-
-});
-
-
-
-})();
+	});
+// });
 // end of wrapping function!!
